@@ -1,25 +1,23 @@
-function getComputerChoice(){
-  Math.floor(Math.random() * 3);
-  //randomly return string values r p or s
-  return
- 
+function getComputerChoice() {
+  const randomNumber = Math.floor(Math.random() * 3);
+  if (randomNumber === 0) {
+    return computerChoice = "rock";
+  } else if (randomNumber === 1) {
+    return computerChoice = "paper";
+  } else {
+    return computerChoice = "scissors";
+  }
 }
 
 function getHumanChoice(){
- //retorna escolhas validas baseado no input do user
- prompt();
+    const choose = prompt("Choose: rock, paper or scissors");
+    if(choose == "rock"){
+        return "rock"
+    } else if(choose == "paper"){
+        return "paper"
+    } else if (choose == "scissors"){
+        return "scissors"
+    }
+
 }
-
-let humanScore = 0;
-let computerScore = 0;
-
-function playRound(computerChoice, humanChoice){
-
-    /*if(humanChoice = rock && computerChoice = paper){
-        humanScore += 1;    
-    } else if (humanxhoixe = paper ...)*/
-}
-
-function playGame(){
-    playRound();
-}
+console.log(getHumanChoice())
